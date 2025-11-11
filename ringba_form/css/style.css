@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+*{box-sizing:border-box;}
+body{
+    font-family:'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+.container{
+    background:#fff;
+    padding:40px 35px;
+    border-radius:16px;
+    max-width:500px;
+    width:100%;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.container:hover{transform:translateY(-5px);}
+
+h2{text-align:center;color:#1e1e1e;margin-bottom:25px;}
+
+.form-group{
+    position:relative;
+    margin-top:20px;
+}
+
+.form-group input{
+    width:100%;
+    padding:14px 12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus{
+    outline:none;
+    border-color:#667eea;
+    box-shadow:0 0 8px rgba(102,126,234,0.5);
+}
+
+.form-group label{
+    position:absolute;
+    top:50%;
+    left:12px;
+    transform:translateY(-50%);
+    background:white;
+    padding:0 5px;
+    color:#999;
+    font-size:14px;
+    pointer-events:none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label{
+    top:-10px;
+    left:10px;
+    font-size:12px;
+    color:#667eea;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#667eea;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background:#764ba2;
+    transform:scale(1.02);
+}
+
+#responseModal{
+    display:none;
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background:rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+}
+
+#responseModal .card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    max-width:700px;
+    width:90%;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;transform:scale(0.95);}
+    100%{opacity:1;transform:scale(1);}
+}
+
+pre{
+    background:#1e1e1e;color:white;padding:15px;border-radius:8px;overflow:auto;white-space:pre-wrap;
+}
+a{display:inline-block;margin-top:15px;text-decoration:none;color:#667eea;font-weight:600;}
